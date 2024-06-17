@@ -207,3 +207,5 @@ Scenario:  Searching 'banana'
      When I click on the Search bar
      And I input text "banana" into the search bar
      Then the search results page is displayed with a error
+
+Try example edition
