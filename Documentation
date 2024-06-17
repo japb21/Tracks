@@ -1,0 +1,15 @@
+Robotframework (automation)
+Robotframework-seleniumlibrary (library of selenium)
+base library (certifi, attrs, certifi, cffi, idna, outcome, pycparser, PySocks, robotframework-pythonlibcore, robotframework-seleniumlibrar, selenium, six, sniffio, sortedcontainers, trio, trio-websocket, typing_extensions, urllib3, wsproto)
+Robotframework-requests (Keywords)
+Plugin intellibot (So that it can read robot files)
+
+Comandos:
+- Correr todos os ficheiros robot:
+    robot --outputdir C:\Users\jubatist\PycharmProjects\Tracks\Results\ .
+
+- Correr ficheiros robot de uma diretoria:
+    robot --outputdir C:\Users\jubatist\PycharmProjects\Tracks\Results\ .\HomeFeature.robot
+
+- Correr ficheiro expecifico
+    robot --outputdir .\Results -i TC-H3H  .\Resources\Features\HomeFeature.robot

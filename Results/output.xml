@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-14T16:40:05.220789" rpa="false" schemaversion="5">
+<suite id="s1" name="ContributeFeature" source="C:\Users\jubatist\PycharmProjects\Tracks\Resources\Features\ContributeFeature.robot">
+<test id="s1-t1" name="Should be able to access &quot;Contribute&quot; page" line="12">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Delete Old Log Files" owner="Mylibrary">
+<arg>${fileDir}</arg>
+<status status="PASS" start="2024-06-14T16:40:05.507139" elapsed="0.001047"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:05.509187" level="INFO">Opening browser 'chrome' to base url 'https://www.getontracks.org'.</msg>
+<arg>${aut['url']}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-14T16:40:05.509187" elapsed="3.468041"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-14T16:40:08.978214" elapsed="1.101164"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:05.506591" elapsed="4.572787"/>
+</kw>
+<kw name="Given Navigate To Home Page" owner="HomeSteps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Navbar['Home']}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-14T16:40:10.081397" elapsed="0.047430"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:10.080402" elapsed="0.049436"/>
+</kw>
+<kw name="When I click on the Contribute page" owner="ContributeSteps">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:10.132823" level="INFO">Clicking link 'xpath=//a[contains(text(),'Contribute')]'.</msg>
+<arg>${Contribute['Contribute']}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-14T16:40:10.131842" elapsed="0.240571"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:10.130822" elapsed="0.241591"/>
+</kw>
+<kw name="Then I view the Contribute page" owner="ContributeSteps">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:10.390533" level="INFO">Current page contains element 'xpath=//h1[@class='entry-title']'.</msg>
+<arg>${paginaContribute['TituloContribute']}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-06-14T16:40:10.373000" elapsed="0.017533"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:10.373000" elapsed="0.017533"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-06-14T16:40:10.392864" elapsed="6.557668"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:10.391851" elapsed="6.558681"/>
+</kw>
+<doc>Displaying Contribute page content, Assuming that the user is on the homepage</doc>
+<tag>TC-C</tag>
+<status status="PASS" start="2024-06-14T16:40:05.505542" elapsed="11.446279"/>
+</test>
+<test id="s1-t2" name="Testing internal links on Contribute page" line="21">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Delete Old Log Files" owner="Mylibrary">
+<arg>${fileDir}</arg>
+<status status="PASS" start="2024-06-14T16:40:16.954816" elapsed="0.001050"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:16.956869" level="INFO">Opening browser 'chrome' to base url 'https://www.getontracks.org'.</msg>
+<arg>${aut['url']}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-14T16:40:16.955866" elapsed="5.155738"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-14T16:40:22.111604" elapsed="0.054998"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:16.954262" elapsed="5.212340"/>
+</kw>
+<kw name="Given Navigate To Home Page" owner="HomeSteps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Navbar['Home']}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-14T16:40:22.171298" elapsed="0.051649"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:22.169833" elapsed="0.053114"/>
+</kw>
+<kw name="And I click on the Contribute page" owner="ContributeSteps">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:22.225376" level="INFO">Clicking link 'xpath=//a[contains(text(),'Contribute')]'.</msg>
+<arg>${Contribute['Contribute']}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-14T16:40:22.223946" elapsed="0.368929"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:22.223946" elapsed="0.370304"/>
+</kw>
+<kw name="When I clicked the link “Matrix”" owner="ContributeSteps">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:22.596669" level="INFO">Clicking link 'xpath=//article[@role='article']//p//a[contains(text(),'Matrix')]'.</msg>
+<arg>${paginaContribute['Matrix']}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-14T16:40:22.595650" elapsed="0.696518"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:22.594724" elapsed="0.697444"/>
+</kw>
+<kw name="Then The link redirect to Matrix page" owner="ContributeSteps">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-14T16:40:23.294425" level="INFO">You are in the Matrix page!</msg>
+<arg>You are in the Matrix page!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-14T16:40:23.293386" elapsed="0.001039"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:23.293386" elapsed="0.001039"/>
+</kw>
+<kw name="And I dont get redirected to the News page" owner="ContributeSteps">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'News')]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-06-14T16:40:23.295392" elapsed="0.017861"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:23.295392" elapsed="0.017861"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-06-14T16:40:23.314977" elapsed="6.475887"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:23.314451" elapsed="6.477909"/>
+</kw>
+<doc>Testing the links in Contribute page dont go to other link</doc>
+<tag>TC-C1</tag>
+<status status="PASS" start="2024-06-14T16:40:16.953059" elapsed="12.839826"/>
+</test>
+<test id="s1-t3" name="Testing link on Contribute page" line="32">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Delete Old Log Files" owner="Mylibrary">
+<arg>${fileDir}</arg>
+<status status="PASS" start="2024-06-14T16:40:29.799356" elapsed="0.001000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:29.803353" level="INFO">Opening browser 'chrome' to base url 'https://www.getontracks.org'.</msg>
+<arg>${aut['url']}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-14T16:40:29.801358" elapsed="4.523634"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-14T16:40:34.325990" elapsed="0.072253"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:29.798358" elapsed="4.601095"/>
+</kw>
+<kw name="Given Navigate To Home Page" owner="HomeSteps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Navbar['Home']}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-14T16:40:34.401382" elapsed="0.042234"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:34.399453" elapsed="0.044163"/>
+</kw>
+<kw name="And I click on the Contribute page" owner="ContributeSteps">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:34.444614" level="INFO">Clicking link 'xpath=//a[contains(text(),'Contribute')]'.</msg>
+<arg>${Contribute['Contribute']}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-14T16:40:34.444614" elapsed="0.252377"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:34.444614" elapsed="0.252377"/>
+</kw>
+<kw name="When I clicked the link “Matrix”" owner="ContributeSteps">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-06-14T16:40:34.697499" level="INFO">Clicking link 'xpath=//article[@role='article']//p//a[contains(text(),'Matrix')]'.</msg>
+<arg>${paginaContribute['Matrix']}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-14T16:40:34.697499" elapsed="0.692673"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:34.697499" elapsed="0.692673"/>
+</kw>
+<kw name="Then The link redirect to Matrix page" owner="ContributeSteps">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-14T16:40:35.391194" level="INFO">You are in the Matrix page!</msg>
+<arg>You are in the Matrix page!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-14T16:40:35.391194" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:35.391194" elapsed="0.000000"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-06-14T16:40:35.392181" elapsed="6.521205"/>
+</kw>
+<status status="PASS" start="2024-06-14T16:40:35.392181" elapsed="6.521205"/>
+</kw>
+<doc>the link in Contribute page should work</doc>
+<tag>TC-C2</tag>
+<status status="PASS" start="2024-06-14T16:40:29.796366" elapsed="12.117020"/>
+</test>
+<doc>Tests about Tracks website...</doc>
+<status status="PASS" start="2024-06-14T16:40:05.224016" elapsed="36.691805"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC-C</stat>
+<stat pass="1" fail="0" skip="0">TC-C1</stat>
+<stat pass="1" fail="0" skip="0">TC-C2</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="ContributeFeature">ContributeFeature</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,33 @@
+*** Settings ***
+Library     SeleniumLibrary
+Library     BuiltIn
+Library     Collections
+Variables         ../POM/ClientsPOM.py
+
+
+*** Variables ***
+${BROWSER} =    chrome
+
+*** Keywords ***
+
+
+I click on the Clients page
+    click link    ${Clients['Clients']}
+
+I view the Clients page
+    page should contain element     ${paginaClients['Clientstitulo']}
+
+I click the source code link
+    click link        ${paginaClients['SourceCode']}
+
+No action is triggered
+    Log      something
+
+The webpage remains unchanged
+    Log        something
+
+I get redirected to the git repo
+    page should contain element     ${paginaClients['GitRepo']}
+
+I dont get redirected to the News page
+    wait until element is not visible     xpath=//a[contains(text(),'News')]   5s

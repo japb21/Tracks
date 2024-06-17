@@ -1,0 +1,30 @@
+*** Settings ***
+Documentation    Tests about Tracks website...
+Library     SeleniumLibrary
+Library     BuiltIn
+Library     Collections
+Variables         ../POM/DownloadPOM.py
+Variables         ../POM/ContributePOM.py
+
+*** Variables ***
+${BROWSER} =    chrome
+
+*** Keywords ***
+
+I click on the Download page
+    click link    ${Download['Download']}
+
+I view the Download page
+     wait until element is visible     ${paginaDownload['Tracks2.6.1']}
+
+I click on the latest version of the app
+    ${status}=        run keyword and return status       Click Element    ${paginaDownload['LatestVersion']}
+    Run Keyword If    ${status} == True     log     checking...
+
+
+I get the latest version
+    Log    Got the right version
+
+I dont get redirected to the Matrix link
+    wait until element is not visible      ${paginaContribute['Matrix']}        5s
+

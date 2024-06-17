@@ -1,0 +1,25 @@
+*** Settings ***
+Library     SeleniumLibrary
+Library     BuiltIn
+Library     Collections
+Variables         ../POM/SearchPOM.py
+
+
+*** Variables ***
+${BROWSER} =    chrome
+
+*** Keywords ***
+
+I click on the Search bar
+    click element    ${Search['Search']}
+
+I view the Search bar
+    page should contain element     ${paginaSearch['Searchtitulo']}
+
+I input text "banana" into the search bar
+    press keys        ${paginaSearch['Searchtitulo']}    banana     ENTER
+
+the search results page is displayed with a error
+   Wait Until Page Contains    não encontrou nenhum documento.
+
+

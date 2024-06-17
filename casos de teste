@@ -1,0 +1,209 @@
+TC-H0
+Feature: Should be able to access "Home" page
+
+Scenario: Check visual elements of the home page
+    Given Navigate To Home Page
+    When I view the home page
+    Then I see the company logo in the header
+    And I see the Navbar
+    And I see the Sidebar
+
+TC-H1
+Feature: Navbar to navigate between contents
+
+Scenario: Check visual elements of the Navbar
+    Given Navigate To Home Page
+    When I see the Navbar
+    Then I see the following items in the navigation bar
+
+
+TC-H2
+Feature: Sidebar with links to other sections
+
+Scenario: Check sidebar links
+     Given Navigate To Home Page
+     When I see the sidebar
+     Then I see the following items in the Sidebar
+
+
+TC-H3
+Feature: Attempt to home page
+
+Scenario: Check if i get to the home page
+    Given I open the browser
+    When I enter the correct url
+    Then I view the home page
+
+TC-H3H
+Feature: View information about the app
+
+Scenario: Check if information about the application is on the home page
+     Given Navigate To Home Page
+     When I view the home page
+     Then I see information about the app
+     And I see Measure your progress
+     And I see Getting informed
+
+TC-HN
+Feature: Check value in the navigation bar
+
+
+scenario:  Check if 'News' value exists on the Navigation bar
+    Given Navigate to Home Page
+    When I see the Navbar
+    Then The Navbar must contain the value
+
+----------------------------------------------------------------------------------
+ TC-NN1
+Featured: Should be able to access "News" page
+
+Scenario: Open News Page, the user as acces to the webpage
+     Given Navigate To Home Page
+     When I click on the News button
+     Then I view the News page
+
+ TC-NN1.1
+Featured: Open Specific link in News
+
+Scenario: Open comments link in News Page
+     Given Navigate To Home Page
+     When I click on the News button
+     And I click on the COMMENT link
+     Then I get redirected to the Comment section
+
+-----------------------------------------------------------------------------------
+TC-M
+Featured: Should be able to access "Manual" page
+
+Scenario: Navigation ManualPage
+     Given Navigate To Home Page
+     When I click on the Manual button
+     Then I view the Manual page
+
+-----------------------------------------------------------------------------------
+TC-D
+Featured: Should be able to access "Download" page
+
+Scenario: Navigation Download
+     Given Navigate To Home Page
+     When I click on the Download page
+     Then I view the Download page
+
+
+TC-D1
+Featured: Latest Download of the app
+
+Scenario: Trying to download the latest version
+    Given Navigate To Home Page
+    And I click on the Download page
+    When I click on the latest version of the app
+    Then I get the latest version
+    And I dont get redirected to the Matrix link
+
+-----------------------------------------------------------------------------------
+
+TC-C
+Feature: Should be able to access "Contribute" page
+
+scenario: Displaying Contribute page content, Assuming that the user is on the homepage
+     Given Navigate To Home Page
+     When I click on the Contribute page
+     Then I view the Contribute page
+
+
+TC-C1
+Feature:  Testing internal links on Contribute page
+
+scenario: Testing the links in Contribute page dont go to other link
+     Given Navigate To Home Page
+     And I click on the Contribute page
+     When I clicked the link “Matrix”
+     Then The link redirect to Matrix page
+     And I dont get redirected to the News page
+
+
+TC-C2
+Feature: Testing link on Contribute page
+
+scenario: The link in Contribute page should work
+     Given Navigate To Home Page
+     And I click on the Contribute page
+     When I clicked the link “Matrix”
+     Then The link redirect to Matrix page
+
+-----------------------------------------------------------------------------------
+
+TC-S
+Feature: Should be able to access "Screenshots" page
+
+scenario: Displaying Screenshots page content
+     Given Navigate To Home Page
+     When I click on the Screenshots page
+     Then I view the Screenshots page
+
+TC-S1
+Feature: Verify Screenshot Link and image
+
+scenario: Dont get redirected to other link
+     Given Navigate to Home Page
+     And I click on the Screenshots page
+     When I click the Main page link
+     Then Main page screenshot appear
+     And I dont get redirected to the News page
+
+TC-S2
+Feature: The Screenshot Link and image match
+
+scenario: Link and image match
+     Given Navigate to Home Page
+     And I click on the Screenshots page
+     When I click the Main page link
+     Then Main page screenshot appear
+
+-----------------------------------------------------------------------------------
+TC-CL
+Feature:Should be able to access "Clients" page
+scenario: Displaying Clients page content
+     Given Navigate To Home Page
+     When I click on the Clients page
+     Then I view the Clients page
+
+
+TC-CL1
+Feature: Verify Clients Link funcionality where i do not get redirect to the 'News' page
+
+scenario:  Verify source code Link match so that i wont get redirected to the 'News' page
+     Given Navigate To Home Page
+     And I click on the Clients page
+     When I click the source code link
+     Then I get redirected to the git repo
+     Then I dont get redirected to the News page
+
+
+TC-CL2
+Feature: Clients Link funcionality and potential webpage match
+
+sceanrio: 'source code' link match
+     Given Navigate To Home Page
+     And I click on the Clients page
+     When I click the source code link
+     Then I get redirected to the git repo
+
+
+-----------------------------------------------------------------------------------
+TC-SB
+Featured: Should be able to access "Search" bar
+
+Scenario: Displaying Search bar
+     Given Navigate To Home Page
+     When I click on the Search bar
+     Then I view the Search bar
+
+TC-SB1
+Featured: Make a search in Search bar
+
+Scenario:  Searching 'banana'
+     Given Navigate To Home Page
+     When I click on the Search bar
+     And I input text "banana" into the search bar
+     Then the search results page is displayed with a error

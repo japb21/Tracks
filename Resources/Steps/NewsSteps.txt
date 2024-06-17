@@ -1,0 +1,26 @@
+*** Settings ***
+Documentation    Tests about Tracks website...
+Library     SeleniumLibrary
+Library     BuiltIn
+Library     Collections
+Variables         ../POM/NewsPOM.py
+
+
+
+
+*** Variables ***
+${BROWSER} =    chrome
+
+*** Keywords ***
+I click on the News button
+    page should contain element    ${News['News']}
+    click link    ${News['News']}
+
+I view the News page
+    page should contain element     ${paginanews['Deprecations']}
+
+I click on the COMMENT link
+    click link    ${paginanews['COMMENTS']}
+
+I get redirected to the Comment section
+    page should contain element    ${paginanews['CommentSection']}

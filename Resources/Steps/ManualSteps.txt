@@ -1,0 +1,18 @@
+*** Settings ***
+Documentation    Tests about Tracks website...
+Library     SeleniumLibrary
+Library     BuiltIn
+Library     Collections
+Variables         ../POM/ManualPOM.py
+
+*** Variables ***
+${BROWSER} =    chrome
+
+*** Keywords ***
+
+
+I click on the Manual button
+    click link    ${Manual['Manual']}
+
+I view the Manual page
+     page should contain element     ${paginaManual['Introduction']}
