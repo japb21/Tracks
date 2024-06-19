@@ -9,8 +9,6 @@ Variables         ../POM/ClientsPOM.py
 ${BROWSER} =    chrome
 
 *** Keywords ***
-
-
 I click on the Clients page
     click link    ${Clients['Clients']}
 

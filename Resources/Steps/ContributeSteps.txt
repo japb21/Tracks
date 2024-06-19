@@ -9,7 +9,6 @@ Variables         ../POM/ContributePOM.py
 ${BROWSER} =    chrome
 
 *** Keywords ***
-
 I click on the Contribute page
     click link    ${Contribute['Contribute']}
 
