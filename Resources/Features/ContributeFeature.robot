@@ -16,7 +16,7 @@ Should be able to access "Contribute" page
      Given Navigate To Home Page
      When I click on the Contribute page
      Then I view the Contribute page
-git
+
 
 Testing internal links on Contribute page
     [Documentation]     Testing the links in Contribute page dont go to other link

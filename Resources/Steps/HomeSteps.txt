@@ -4,12 +4,7 @@ Library     SeleniumLibrary
 Library     BuiltIn
 Library     Collections
 Library     ../Features/Mylibrary.py
-
 Variables     ../POM/HomePOM.py
-
-
-
-
 
 *** Variables ***
 ${BROWSER} =    chrome
