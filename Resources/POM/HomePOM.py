@@ -2,6 +2,10 @@ aut = {
     'url': "https://www.getontracks.org",
 }
 
+Privacy = {
+    'AcceptPrivacy': "xpath=//button[@id='ppms_cm_agree-to-all']",
+}
+
 PaginaInicial = {
     'History': "id=history",
     'Logo': "xpath=//img[@src='/images/tracks-logo-dark.png']",
